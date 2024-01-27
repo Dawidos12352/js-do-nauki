@@ -5,6 +5,8 @@ console.log(galleryItems);
 
 const gallery = document.querySelector(".gallery");
 
+// 1
+
 const galleryArray = []
 
 galleryItems.forEach(e => {
@@ -33,24 +35,45 @@ galleryItems.forEach(e => {
 gallery.append(...galleryArray);
 console.log(gallery)
 
-gallery.addEventListener("click" , e => {
+
+// 2
+
+// const newImage = galleryItems.map(e => 
+//     `<div class="gallery__item">
+//     <a class="gallery__link" href="${e.original}">
+//         <img class="gallery__image" src="${e.preview}" data-source="${e.original}" alt="${e.description}"/>
+//     </a>
+// </div>`
+// ).join("")
+
+  
+
+
+// gallery.insertAdjacentHTML("beforeend" , newImage);
+
+
+
+
+
+gallery.addEventListener("click", e => {
     e.preventDefault();
 
     if(e.target.nodeName !== "IMG"){
-        return;
+        return
     }
-
-    const dataSourceImage = e.target.getAttribute("data-source");
+const imageSrc = e.target.getAttribute("data-source");
 
     const instance = basicLightbox.create(
-        `<img src=${dataSourceImage} width="800" height="600">`
+        `<img src="${imageSrc}" width="800" height="600">`
     , {
-    onShow: (instance) => {
-        document.addEventListener("keydown" , e => {
-            if ( e.key === "Escape") instance.close();
-        });
-    }}
-
+        onShow: (instance) => {
+            document.addEventListener("keydown", e => {
+                if(e.key === "Escape") instance.close();
+            })
+        }}
     )
-    instance.show();
+
+instance.show();
+
+
 })
