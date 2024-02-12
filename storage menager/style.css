@@ -1,0 +1,49 @@
+* {
+  font-size: 16px;
+}
+body {
+  background-color: #3b3756;
+  color: #f1f272;
+}
+input {
+  border: none;
+  color: white;
+  background-color: #66608d;
+}
+input::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+input[name="inputKeyName"] {
+  margin-right: 20px;
+}
+button {
+  outline: none;
+  background-color: black;
+  border: 1px solid #f1f272;
+  color: #f1f272;
+  border-radius: 2px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+#itemForm {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+#entries form {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: center;
+}
+#entries form span {
+  display: block;
+  margin-right: 10px;
+  width: 20%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
