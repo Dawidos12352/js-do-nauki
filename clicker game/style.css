@@ -1,0 +1,90 @@
+.toastify {
+  padding: 12px 20px;
+  color: #ffffff;
+  display: inline-block;
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, 0.12),
+    0 10px 36px -4px rgba(77, 96, 232, 0.3);
+  background: #aa0000;
+  position: fixed;
+  top: -150px;
+  right: 15px;
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.toastify.info {
+  background: linear-gradient(135deg, #73a5ff, #5477f5);
+}
+.toastify.on {
+  opacity: 1;
+}
+* {
+  font-size: 16px;
+}
+body {
+  background-color: #3b3756;
+  color: #f1f272;
+}
+input {
+  border: none;
+  color: white;
+  background-color: #66608d;
+}
+
+input[readonly] {
+  background-color: #3b3756;
+  display: block;
+}
+
+input[readonly]:focus {
+  border: none;
+  outline: none;
+}
+.flex-row {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+button {
+  outline: none;
+  background-color: black;
+  border: 1px solid #f1f272;
+  color: #f1f272;
+  border-radius: 2px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.buildings {
+  display: flex;
+  align-items: flex-start;
+}
+
+.buildings-group {
+  margin-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  align-items: flex-start;
+}
+.building {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 5px;
+  gap: 10px;
+}
+
+.building.mine {
+  background-image: url("./mine.png");
+}
+.building.sawmill {
+  background-image: url("./sawmill.png");
+}

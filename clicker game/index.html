@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+    <script src="./tostify.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="counters" name="">
+        <div class="flex-row">
+          <label>
+            <span>Metal:</span>
+            <input id="metalCounter" name="metal" type="number" readonly />
+          </label>
+          <label>
+            <span>Wood:</span>
+            <input id="woodCounter" name="wood" type="number" readonly />
+          </label>
+          <label>
+            <span>Gold:</span>
+            <input id="goldCounter" name="gold" type="number" readonly />
+          </label>
+        </div>
+        <div class="flex-row">
+          <button type="button" class="buy" data-building-name="mine">
+            Mine +1
+          </button>
+          <button type="button" class="buy" data-building-name="sawmill">
+            Sawmill +1
+          </button>
+          <button type="button" class="mine" data-resource-name="gold">
+            Mine Gold
+          </button>
+          <button type="button" class="mine" data-resource-name="metal">
+            Mine Metal
+          </button>
+          <button type="button" id="save">Save</button>
+          <button type="button" id="stop">⏸️</button>
+          <button type="button" id="start">▶️</button>
+        </div>
+      </form>
+      <div class="buildings">
+        <div class="buildings-group" id="mines"></div>
+        <div class="buildings-group" id="sawmills"></div>
+      </div>
+    </div>
+  </body>
+</html>
