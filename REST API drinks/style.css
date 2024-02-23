@@ -29,3 +29,9 @@ body {
 .drink-title {
   font-size: 50px;
 }
+.oredred-list:last-child {
+  visibility: hidden;
+}
+h3 {
+  font-size: 36px;
+}
