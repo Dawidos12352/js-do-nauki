@@ -4,14 +4,19 @@ const POSSIBLE_INGREDIENTS_AMOUNT = 15;
 const form = document.querySelector("form")
 const drinksRecipes = document.querySelector("#drinks")
 
-const inputValue = form.elements.drinks.value
+
+
+function formHandler(r){
+    r.preventDefault();
+
+    const inputValue = form.elements.drinks.value
 
 const getURL = (drinkName) => {
  return `${API_PATH}?s=${drinkName}`
 }
 console.log(getURL(inputValue))
 
-const respsnse = fetch(getURL(inputValue))
+    const respsnse = fetch(getURL(inputValue))
 
 respsnse.then((data) => {
     if(!data.ok){
@@ -64,6 +69,13 @@ respsnse.then((data) => {
 .catch((e) => {
     console.log(e)
 })
+}
+
+form.addEventListener("submit", formHandler)
+
+
+
+
 
 
 
